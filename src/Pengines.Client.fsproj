@@ -1,7 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <PackageLicenseUrl>https://github.com/ninjarobot/Pengines.Client/blob/master/LICENSE.md</PackageLicenseUrl>
+    <Copyright>Copyright (c) 2016-2018 Virtustream Corporation</Copyright>
+    <Description>Client library for the Pengines service for evaluating SWI-Prolog over HTTP.  Primarily designed for F#, but usable from any .NET language.</Description>
+    <PackageProjectUrl>https://github.com/ninjarobot/Pengines.Client</PackageProjectUrl>
+    <PackageTags>pengines;prolog</PackageTags>
+    <Authors>dcurylo</Authors>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\paket-files\xyncro\chiron\src\Chiron\Chiron.fs">
