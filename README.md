@@ -1,6 +1,8 @@
 Pengines Client for F#
 ========
 
+[![Build status](https://ci.appveyor.com/api/projects/status/5g9t3b07cwt9n91i?svg=true)](https://ci.appveyor.com/project/ninjarobot/pengines-client)
+
 Pengines is an HTTP service for evaluating Prolog build on the foundation of SWI-Prolog.  A client creates a [Pengine](http://www.swi-prolog.org/pengines/PengineConcept.html), which is a sandboxed Prolog environment, passes any Prolog facts and rules, then queries the facts and rules to obtain a list of solutions.
 
 Modules
