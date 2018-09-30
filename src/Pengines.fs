@@ -267,3 +267,12 @@ module Pengine =
         }
 
     let Solver (baseUri:System.Uri) = SolverWithConfig defaultSolverConfig baseUri
+
+    /// Matches an `Answer option` with a list of solutions.
+    let (|SolutionsList|_|) (answerOpt:Answer option) =
+        match answerOpt with
+        | Some answer ->
+            match answer.Data with
+            | ListTerm solutions -> Some solutions
+            | _ -> None
+        | _ -> None

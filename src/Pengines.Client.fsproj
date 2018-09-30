@@ -11,10 +11,6 @@
     <Authors>dcurylo</Authors>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\paket-files\xyncro\chiron\src\Chiron\Chiron.fs">
-      <Paket>True</Paket>
-      <Link>paket-files/Chiron.fs</Link>
-    </Compile>
     <Compile Include="Pengines.fs" />
   </ItemGroup>
   <Import Project="..\.paket\Paket.Restore.targets" />

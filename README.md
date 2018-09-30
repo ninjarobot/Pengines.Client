@@ -27,7 +27,9 @@ Usage
 3. Iterate through the results.
 4. Destroy the Pengine instance, which will delete the facts and rules.  It will timeout and self-destruct after 5 minutes without use if you don't.
 
-Example
+Documentation
 --------
 
-Still working on some nice examples, but the [tests](tests/Tests.fs) show usage of the complete API.
+Please see the [user guide](wiki/Using-Pengines.Client) for a walkthrough.
+
+There are also [tests](tests/Tests.fs) that show usage of the complete API.
