@@ -1,0 +1,18 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+skip_commits:
+  files:
+    - *.md
+build_script:
+- cmd: >-
+    curl -fsSL -o .paket\paket.exe https://github.com/fsprojects/Paket/releases/download/5.181.1/paket.exe
+
+    dotnet pack -c Release /p:PackageVersion=%APPVEYOR_BUILD_VERSION% src/Pengines.Client.fsproj
+test_script:
+- cmd: dotnet test tests/Pengines.Client.Tests.fsproj
+artifacts:
+- path: src\bin\Release\Pengines.Client.1.0.%APPVEYOR_BUILD_NUMBER%.nupkg
+deploy:
+- provider: NuGet
+  api_key:
+    secure: I4rC81ZB9RJoTnqKtW36gOFLdPDcdQoo/y2E8gG+S0teqic6Ty4eBY1h/bz6LeAs
