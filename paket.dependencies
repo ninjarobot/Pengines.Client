@@ -1,3 +1,0 @@
-source https://www.nuget.org/api/v2
-nuget Chiron ~ 6
-nuget FSharp.Core >= 4.2.0

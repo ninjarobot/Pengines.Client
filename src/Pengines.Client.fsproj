@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
     <PackageVersion>1.0.0</PackageVersion>
     <PackageLicenseUrl>https://github.com/ninjarobot/Pengines.Client/blob/master/LICENSE.md</PackageLicenseUrl>
     <Copyright>Copyright (c) 2016-2018 Virtustream Corporation</Copyright>
@@ -13,5 +13,9 @@
   <ItemGroup>
     <Compile Include="Pengines.fs" />
   </ItemGroup>
-  <Import Project="..\.paket\Paket.Restore.targets" />
+  <ItemGroup>
+    <PackageReference Include="FSharp.Core" Version="4.5.2" />
+    <PackageReference Include="Chiron" Version="6.3.0" />
+    <PackageReference Include="System.Net.Http" Version="4.3.3" />
+  </ItemGroup>
 </Project>
