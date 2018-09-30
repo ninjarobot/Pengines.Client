@@ -30,6 +30,6 @@ Usage
 Documentation
 --------
 
-Please see the [user guide](wiki/Using-Pengines.Client) for a walkthrough.
+Please see the [user guide](../../wiki/Using-Pengines.Client) for a walkthrough.
 
 There are also [tests](tests/Tests.fs) that show usage of the complete API.
