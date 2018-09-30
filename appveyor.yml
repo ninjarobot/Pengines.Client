@@ -4,14 +4,14 @@ skip_commits:
   files:
     - '*.md'
 build_script:
-- cmd: >-
-    dotnet restore
-    dotnet pack -c Release /p:PackageVersion=%APPVEYOR_BUILD_VERSION% src/Pengines.Client.fsproj
+  - ps: dotnet --info
+  - ps: dotnet restore
+  - ps: dotnet pack -c Release /p:PackageVersion=%APPVEYOR_BUILD_VERSION% src/Pengines.Client.fsproj
 test_script:
-- cmd: dotnet test -f netcoreapp2.0 tests/Pengines.Client.Tests.fsproj
+  - ps: dotnet test -f netcoreapp2.0 tests/Pengines.Client.Tests.fsproj
 artifacts:
-- path: src\bin\Release\Pengines.Client.1.0.%APPVEYOR_BUILD_NUMBER%.nupkg
+  - path: src\bin\Release\Pengines.Client.1.0.%APPVEYOR_BUILD_NUMBER%.nupkg
 deploy:
-- provider: NuGet
-  api_key:
-    secure: I4rC81ZB9RJoTnqKtW36gOFLdPDcdQoo/y2E8gG+S0teqic6Ty4eBY1h/bz6LeAs
+  - provider: NuGet
+    api_key:
+      secure: I4rC81ZB9RJoTnqKtW36gOFLdPDcdQoo/y2E8gG+S0teqic6Ty4eBY1h/bz6LeAs
