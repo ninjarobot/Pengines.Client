@@ -5,7 +5,7 @@
     <Authors>dcurylo</Authors>
     <Copyright>Copyright (c) 2019-2021 Dave Curylo. Copyright (c) 2016-2018 Virtustream Corporation.</Copyright>
     <Description>Client library for the Pengines service for evaluating SWI-Prolog over HTTP.  Primarily designed for F#, but usable from any .NET language.</Description>
-    <PackageVersion>1.0.2</PackageVersion>
+    <PackageVersion>1.0.6</PackageVersion>
     <PackageProjectUrl>https://github.com/ninjarobot/Pengines.Client</PackageProjectUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageTags>pengines;prolog</PackageTags>
