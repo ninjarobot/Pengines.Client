@@ -266,8 +266,8 @@ let tests = testList "Pengines tests" [
         match! Solver baseUri src ask with
         | Ok results when results.Length = 0 ->
             failwith "No results returned."
-        | Ok results when results.Length > 0 ->
-            let (firstResult::_) = results
+        | Ok results ->
+            let firstResult = results |> List.head
             match firstResult with
             | DictTerm dictionary when dictionary.ContainsKey "Instructions" ->
                 match dictionary.["Instructions"] with
