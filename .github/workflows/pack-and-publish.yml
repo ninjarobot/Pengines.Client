@@ -3,19 +3,16 @@ name: dotnet pack and publish
 on:
   release:
     types: [released]
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   publish:
-
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v7.0.1
       - name: Setup .NET
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 6.0.300
+        uses: actions/setup-dotnet@v6.1.0
       - name: Restore dependencies
         run: dotnet restore
       - name: Build

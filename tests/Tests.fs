@@ -9,7 +9,7 @@ open Pengines.Serialization
 
 let createPengineReq src ask = { SrcText=src; Ask=ask |> Some; Format="json"; Chunk=None }
 
-let baseUri = System.Uri ("https://pengines.swi-prolog.org")
+let baseUri = System.Uri ("https://swish.swi-prolog.org")
 let http = new System.Net.Http.HttpClient ()
 
 [<Tests>]
